@@ -20,6 +20,11 @@ public class BaumController {
 		return baumService.getAllBaum();
 	}
 	
+	@RequestMapping("/")
+	public String checkApp() {
+		return "Application running";
+	}
+	
 	
 	@RequestMapping(method=RequestMethod.POST, value = "/baum")
 	public void addBaum(@RequestBody Baum baum) {
